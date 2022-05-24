@@ -10,6 +10,8 @@ ROUTES ?= ""
 SA_NAME ?= tailscale
 KUBE_SECRET ?= tailscale
 
+all: rbac subnet-router
+
 build:
 	@docker build . -t $(IMAGE_TAG)
 

@@ -4,6 +4,10 @@
 
 #! /bin/sh
 
+SERVICE_CIDR=10.96.0.0/12
+POD_CIDR=10.244.0.0/24
+export ROUTES=$SERVICE_CIDR,$POD_CIDR
+
 export PATH=$PATH:/tailscale/bin
 
 AUTH_KEY="${AUTH_KEY:-}"

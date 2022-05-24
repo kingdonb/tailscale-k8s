@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    app: tailscale
+  name: subnet-router
+  namespace: demo
+spec:
+  containers:
+  - env:
+    - name: KUBE_SECRET
+      value: tailscale
+    - name: USERSPACE
+      value: "true"
+    - name: AUTH_KEY
+      valueFrom:
+        secretKeyRef:
+          key: AUTH_KEY
+          name: tailscale-auth
+          optional: true
+    - name: ROUTES
+      value: ""
+    image: kingdonb/tailscale-k8s:0.0.1
+    imagePullPolicy: Always
+    name: tailscale
+    securityContext:
+      runAsGroup: 1000
+      runAsUser: 1000
+  serviceAccountName: tailscale
