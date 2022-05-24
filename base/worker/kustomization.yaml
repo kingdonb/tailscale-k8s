@@ -1,6 +1,5 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namespace: tailscale
 resources:
-- ../../../apps/base/tailscale/
-- namespace.yaml
+- apps.yaml
+- infrastructure.yaml
