@@ -20,7 +20,7 @@ KUBE_SECRET="${KUBE_SECRET:-tailscale}"
 
 set -e
 
-TAILSCALED_ARGS="--state=kube:${KUBE_SECRET} --socket=/tmp/tailscaled.sock"
+TAILSCALED_ARGS="--state=kube:${KUBE_SECRET} --socket=/tmp/tailscaled.sock --advertise-exit-node"
 
 if [[ "${USERSPACE}" == "true" ]]; then
   if [[ ! -z "${DEST_IP}" ]]; then
