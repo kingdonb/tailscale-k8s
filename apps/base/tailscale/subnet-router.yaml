@@ -4,12 +4,12 @@ metadata:
   labels:
     app: tailscale
   name: subnet-router
-  namespace: demo
+  namespace: tailscale
 spec:
   containers:
   - env:
     - name: KUBE_SECRET
-      value: tailscale
+      value: tailscale-auth
     - name: USERSPACE
       value: "true"
     - name: AUTH_KEY
@@ -19,8 +19,8 @@ spec:
           name: tailscale-auth
           optional: true
     - name: ROUTES
-      value: ""
-    image: kingdonb/tailscale-k8s:0.0.1
+      value: 10.96.0.0/12,10.244.0.0/24,10.17.12.0/24
+    image: kingdonb/tailscale-k8s:0.0.2
     imagePullPolicy: Always
     name: tailscale
     securityContext:
