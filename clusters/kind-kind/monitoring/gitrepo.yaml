@@ -8,6 +8,6 @@ spec:
   gitImplementation: go-git
   interval: 30m0s
   ref:
-    branch: main
+    branch: monitoring
   timeout: 1m0s
-  url: https://github.com/fluxcd/flux2
+  url: https://github.com/kingdonb/flux2
