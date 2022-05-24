@@ -5,6 +5,7 @@ metadata:
   name: flux
   namespace: flux
 spec:
+  suspend: true
   chart:
     spec:
       chart: flux

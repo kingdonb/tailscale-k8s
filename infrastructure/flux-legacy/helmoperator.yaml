@@ -5,6 +5,7 @@ metadata:
   name: helm-operator
   namespace: flux
 spec:
+  suspend: true
   chart:
     spec:
       chart: helm-operator
