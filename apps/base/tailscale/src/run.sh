@@ -20,7 +20,7 @@ KUBE_SECRET="${KUBE_SECRET:-tailscale}"
 
 set -e
 
-TAILSCALED_ARGS="--state=kube:${KUBE_SECRET} --socket=/tmp/tailscaled.sock --advertise-exit-node"
+TAILSCALED_ARGS="--state=kube:${KUBE_SECRET} --socket=/tmp/tailscaled.sock"
 
 if [[ "${USERSPACE}" == "true" ]]; then
   if [[ ! -z "${DEST_IP}" ]]; then
@@ -42,7 +42,7 @@ echo "Starting tailscaled"
 tailscaled ${TAILSCALED_ARGS} &
 PID=$!
 
-UP_ARGS="--accept-dns=false"
+UP_ARGS="--accept-dns=false --advertise-exit-node"
 if [[ ! -z "${ROUTES}" ]]; then
   UP_ARGS="--advertise-routes=${ROUTES} ${UP_ARGS}"
 fi
