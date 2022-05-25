@@ -5,7 +5,7 @@ metadata:
   name: flux
   namespace: flux
 spec:
-  suspend: true
+  suspend: false
   chart:
     spec:
       chart: flux
@@ -19,7 +19,9 @@ spec:
   timeout: 1m0s
   values:
     git:
-      url: git@github.com:kingdonb/flux-get-started
+      url: git@github.com:kingdonb/tailscale-k8s.git
+      branch: main
+      path: ./legacy
     dnsConfig:
       options:
         - name: ndots
