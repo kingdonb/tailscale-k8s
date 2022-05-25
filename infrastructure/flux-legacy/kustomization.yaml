@@ -3,6 +3,6 @@ kind: Kustomization
 resources:
 - crds/helmrelease.yaml
 #- helmoperator.yaml
-#- helmrelease.yaml
+- helmrelease.yaml
 - helmrepo.yaml
 - namespace.yaml
