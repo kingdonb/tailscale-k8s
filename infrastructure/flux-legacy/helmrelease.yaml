@@ -18,8 +18,8 @@ spec:
   interval: 10m0s
   timeout: 1m0s
   values:
-    image:
-      tag: 1.25.2
+    # image:
+    #   tag: 1.25.2
     git:
       url: git@github.com:kingdonb/tailscale-k8s.git
       branch: main
