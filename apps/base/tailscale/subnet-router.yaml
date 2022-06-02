@@ -28,8 +28,8 @@ spec:
               name: tailscale-auth
               optional: true
         - name: ROUTES
-          value: 10.96.0.0/12,10.244.0.0/24,172.18.255.192/26
-        image: kingdonb/tailscale-k8s:0.0.6
+          value: 10.96.0.0/12,10.244.0.0/24,172.18.0.0/16
+        image: kingdonb/tailscale-k8s:0.0.7
         imagePullPolicy: Always
         name: tailscale
         securityContext:
