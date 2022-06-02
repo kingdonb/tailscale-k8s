@@ -3,4 +3,4 @@ kind: Kustomization
 resources:
 - ../../../base/worker
 #- ../../../base/kind-worker
-- ../../../base/tailscale-worker/somtochi-tailscale
+- ../../../apps/tailscale-worker/somtochi-tailscale/
