@@ -2,7 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
 - ../../../base/worker
-- ../../../base/kind-worker
+- ../../../apps/kind-worker
 # - ../../../apps/tailscale-worker/somtochi-tailscale/
 - ../../../apps/tailscale-worker/kingdon-tailscale/
 - ../../../apps/tailscale-worker/juozas-tailscale/
