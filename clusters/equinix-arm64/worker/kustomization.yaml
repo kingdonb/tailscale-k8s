@@ -3,4 +3,6 @@ kind: Kustomization
 resources:
 - ../../../base/worker
 - ../../../base/kind-worker
-- ../../../base/tailscale-worker
+# - ../../../apps/tailscale-worker/somtochi-tailscale/
+- ../../../apps/tailscale-worker/kingdon-tailscale/
+- ../../../apps/tailscale-worker/juozas-tailscale/
