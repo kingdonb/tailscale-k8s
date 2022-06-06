@@ -4,15 +4,15 @@ resources:
 - gotk-components.yaml
 - gotk-sync.yaml
 patches:
-- patch: |
-    - op: add
-      path: /spec/template/spec/containers/0/env/0
-      value:
-        name: EXPERIMENTAL_GIT_TRANSPORT
-        value: "true"
-  target:
-    kind: Deployment
-    name: "(source-controller|image-automation-controller)"
+#- patch: |
+#    - op: add
+#      path: /spec/template/spec/containers/0/env/0
+#      value:
+#        name: EXPERIMENTAL_GIT_TRANSPORT
+#        value: "true"
+#  target:
+#    kind: Deployment
+#    name: "(source-controller|image-automation-controller)"
 - patch: |
     - op: add
       path: /spec/template/spec/containers/0/args/-
