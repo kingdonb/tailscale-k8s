@@ -21,3 +21,8 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: podinfo
+  values:
+    logLevel: debug
+    replicaCount: 2
+    ui:
+      color: red
