@@ -25,4 +25,4 @@ spec:
     logLevel: debug
     replicaCount: 2
     ui:
-      color: red
+      color: green
