@@ -8,7 +8,7 @@ spec:
   imageRepositoryRef:
     name: river-data-example
   filterTags:
-    pattern: '^b[0-9]+\.(?P<ts>[0-9]{8}\.[0-9]{6})'
+    pattern: '^.*-[a-fA-F0-9]+-(?P<ts>.*)'
     extract: '$ts'
   policy:
     numerical:
