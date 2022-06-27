@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: river-data
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-production
+spec:
+  ingressClassName: internal
+  rules:
+  - host: river-data.tailscale-k8s.hephy.pro
+    http:
+      paths:
+      - backend:
+          service:
+            name: river-data
+            port:
+              number: 80
+        path: /
+        pathType: Prefix
+  tls:
+  - hosts:
+    - river-data.tailscale-k8s.hephy.pro
+    secretName: river-data-stg-tls
