@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: river-data
+spec:
+  selector:
+    matchLabels:
+      app: river-data
+  template:
+    metadata:
+      labels:
+        app: river-data
+    spec:
+      containers:
+        - name: river-data
+          image: ghcr.io/kingdonb/river-data-explorer:0.0.1
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 80
+              protocol: TCP
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: river-data
+  namespace: app
+spec:
+  ports:
+    - name: http
+      port: 80
+  selector:
+    app: river-data
