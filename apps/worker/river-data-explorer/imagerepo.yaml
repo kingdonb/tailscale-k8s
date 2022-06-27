@@ -1,9 +1,9 @@
-# ---
-# apiVersion: image.toolkit.fluxcd.io/v1beta1
-# kind: ImageRepository
-# metadata:
-#   name: river-data-example
-#   namespace: river-data
-# spec:
-#   image: ghcr.io/kingdonb/river-data-explorer
-#   interval: 1m0s
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta1
+kind: ImageRepository
+metadata:
+  name: river-data-example
+  namespace: river-data
+spec:
+  image: ghcr.io/kingdonb/river-data-explorer
+  interval: 1m0s
