@@ -3,6 +3,7 @@ kind: Kustomization
 resources:
 - ../../../base/worker
 - sintache-ns.yaml
+- river-data-ns.yaml
 # - ../../../apps/kind-worker
 # - ../../../apps/tailscale-worker/somtochi-tailscale/
 - ../../../apps/tailscale-worker/kingdon-tailscale/
