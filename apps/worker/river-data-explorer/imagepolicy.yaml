@@ -1,15 +1,15 @@
-# ---
-# apiVersion: image.toolkit.fluxcd.io/v1beta1
-# kind: ImagePolicy
-# metadata:
-#   name: example
-#   namespace: river-data
-# spec:
-#   imageRepositoryRef:
-#     name: river-data-example
-#   filterTags:
-#     pattern: '^b[0-9]+\.(?P<ts>[0-9]{8}\.[0-9]{6})'
-#     extract: '$ts'
-#   policy:
-#     numerical:
-#       order: asc
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta1
+kind: ImagePolicy
+metadata:
+  name: example
+  namespace: river-data
+spec:
+  imageRepositoryRef:
+    name: river-data-example
+  filterTags:
+    pattern: '^b[0-9]+\.(?P<ts>[0-9]{8}\.[0-9]{6})'
+    extract: '$ts'
+  policy:
+    numerical:
+      order: asc
