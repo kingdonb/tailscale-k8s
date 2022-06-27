@@ -8,4 +8,4 @@ spec:
     spec:
       containers:
       - name: river-data
-        image: ghcr.io/kingdonb/river-data-explorer:yarn-upgrade-d4bbfe14-1656373499 # {"$imagepolicy": "river-data:example"}
+        image: ghcr.io/kingdonb/river-data-explorer:main-b0da3f1f-1656374080 # {"$imagepolicy": "river-data:example"}
