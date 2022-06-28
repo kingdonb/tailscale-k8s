@@ -17,7 +17,7 @@ spec:
           imagePullPolicy: IfNotPresent
           env:
             - name: DATABASE_HOST
-              value: 10.17.12.228
+              value: 10.96.208.116
             - name: RAILS_MASTER_KEY
               valueFrom:
                 secretKeyRef:
