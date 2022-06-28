@@ -5,7 +5,7 @@ metadata:
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-production
 spec:
-  ingressClassName: internal
+  ingressClassName: nginx
   rules:
   - host: river-data.tailscale-k8s.hephy.pro
     http:
