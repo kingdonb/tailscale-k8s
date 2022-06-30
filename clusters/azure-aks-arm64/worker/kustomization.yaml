@@ -2,7 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
 - ../../../base/worker
-#- sintache-ns.yaml
+- sintache-ns.yaml
 - river-data-ns.yaml
 - rosetta-ns.yaml
 # - ../../../apps/kind-worker
