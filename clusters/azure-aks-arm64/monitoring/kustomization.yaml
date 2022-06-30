@@ -2,5 +2,5 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
 - gitrepo.yaml
-- monitoring-config.yaml
-- monitoring-stack.yaml
+#- monitoring-config.yaml
+#- monitoring-stack.yaml
