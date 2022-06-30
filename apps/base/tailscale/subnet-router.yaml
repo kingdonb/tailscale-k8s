@@ -1,10 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: subnet-router
-  namespace: tailscale
   labels:
     app: tailscale
+  name: subnet-router
+  namespace: tailscale
 spec:
   replicas: 1
   selector:
@@ -28,8 +28,8 @@ spec:
               name: tailscale-auth
               optional: true
         - name: ROUTES
-          value: 10.0.0.0/20,10.124.0.0/14
-        image: kingdonb/tailscale-k8s:0.0.8-gke
+          value: 10.20.0.0/16,10.42.0.0/15
+        image: kingdonb/tailscale-k8s:0.0.9
         imagePullPolicy: Always
         name: tailscale
         securityContext:

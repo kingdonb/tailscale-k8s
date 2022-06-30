@@ -1,0 +1,18 @@
+export IMAGE_TAG=kingdonb/tailscale-k8s:0.0.9
+# make push
+export SA_NAME=tailscale
+export KUBE_SECRET=tailscale-auth
+# kubectl create namespace tailscale
+# kubectl config set-context --current --namespace=tailscale
+# make rbac
+
+export SERVICE_CIDR=10.20.0.0/16
+export POD_CIDR=10.42.0.0/15
+export ROUTES=$SERVICE_CIDR,$POD_CIDR
+#export LB_CIDR=
+unset LB_CIDR
+#export HOME_CIDR=
+unset HOME_CIDR
+# make subnet-router
+
+# Following the example at https://tailscale.com/kb/1185/kubernetes/
