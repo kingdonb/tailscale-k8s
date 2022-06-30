@@ -11,4 +11,4 @@ spec:
         image: img.hephy.pro/examples/sinatra-mustache:b4.20220630.042135 # {"$imagepolicy": "sintache:example"}
         env:
           - name: DATABASE_HOST
-            value: 10.0.98.125
+            value: 10.0.113.53
