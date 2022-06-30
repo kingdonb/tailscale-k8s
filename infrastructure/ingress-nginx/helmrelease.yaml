@@ -11,12 +11,12 @@ spec:
     controller:
       ingressClassResource:
         default: true
-      service:
-        type: ClusterIP
-      kind: DaemonSet
-      hostNetwork: true
-      hostPort:
-        enabled: true
+      # service:
+      #   type: ClusterIP
+      # kind: DaemonSet
+      # hostNetwork: true
+      # hostPort:
+      #   enabled: true
   chart:
     spec:
       chart: ingress-nginx
