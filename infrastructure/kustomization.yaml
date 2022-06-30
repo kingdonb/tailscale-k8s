@@ -3,4 +3,5 @@ kind: Kustomization
 resources:
 # - flux-legacy
 - ingress-nginx
+- kubedb/mariadb-instance.yaml
 - rosettak8s/
