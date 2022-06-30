@@ -4,6 +4,7 @@ resources:
 - ../../../base/worker
 #- sintache-ns.yaml
 - river-data-ns.yaml
+- rosetta-ns.yaml
 # - ../../../apps/kind-worker
 # - ../../../apps/tailscale-worker/somtochi-tailscale/
 - ../../../apps/tailscale-worker/kingdon-tailscale/
