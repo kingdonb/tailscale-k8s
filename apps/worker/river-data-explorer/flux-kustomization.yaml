@@ -6,7 +6,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 15m0s
-  path: ./deploy
+  path: ./deploy/automated
   prune: true
   sourceRef:
     kind: GitRepository
