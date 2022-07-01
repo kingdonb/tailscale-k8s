@@ -27,8 +27,8 @@ spec:
             - name: MYSQL_DATABASE_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: sintache-db-password
-                  key: db-password
+                  name: sample-mariadb-auth
+                  key: password
                   optional: false
           ports:
             - name: http
