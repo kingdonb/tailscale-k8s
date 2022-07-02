@@ -3,7 +3,7 @@ kind: Kustomization
 resources:
 - ../../../base/worker
 - sintache-ns.yaml
-- river-auto-ns.yaml
+#- river-auto-ns.yaml
 - river-data-ns.yaml
 - rosetta-ns.yaml
 # - ../../../apps/kind-worker
