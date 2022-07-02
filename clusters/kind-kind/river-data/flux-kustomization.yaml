@@ -1,0 +1,15 @@
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: river-data
+  namespace: flux-system
+spec:
+  interval: 15m0s
+  path: ./deploy/dev
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: river-data-ro
+  timeout: 2m0s
+  wait: false

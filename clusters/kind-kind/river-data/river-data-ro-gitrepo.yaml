@@ -1,0 +1,13 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: GitRepository
+metadata:
+  name: river-data-ro
+  namespace: flux-system
+spec:
+  gitImplementation: go-git
+  interval: 25s
+  ref:
+    branch: main
+  timeout: 20s
+  url: https://github.com/kingdonb/river-data-explorer.git
