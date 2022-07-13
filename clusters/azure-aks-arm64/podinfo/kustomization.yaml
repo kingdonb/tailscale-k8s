@@ -1,2 +1,2 @@
 resources:
-  - ../../../podinfo/deploy/dev
+  - ../../../podinfo/deploy/overlays/dev
