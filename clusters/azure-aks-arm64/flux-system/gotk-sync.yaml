@@ -3,6 +3,19 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: GitRepository
 metadata:
+  name: podinfo
+  namespace: flux-system
+spec:
+  interval: 10s
+  ref:
+    branch: master
+  #secretRef:
+  #  name: flux-system
+  url: https://github.com/kingdonb/podinfo
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: GitRepository
+metadata:
   name: flux-system
   namespace: flux-system
 spec:
@@ -12,6 +25,11 @@ spec:
   #secretRef:
   #  name: flux-system
   url: https://github.com/kingdonb/tailscale-k8s
+  include:
+    - fromPath: .
+      repository:
+        name: podinfo
+      toPath: podinfo
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
@@ -20,7 +38,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 10m0s
-  path: ./clusters/azure-aks-arm64
+  path: ./clusters/azure-aks-arm64/podinfo
   prune: true
   sourceRef:
     kind: GitRepository
