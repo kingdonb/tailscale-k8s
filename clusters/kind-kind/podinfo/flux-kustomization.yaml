@@ -6,6 +6,7 @@ metadata:
   namespace: podinfo
 spec:
   interval: 1m0s
+  timeout: 1m0s
   path: ./kustomize
   targetNamespace: podinfo
   prune: true
