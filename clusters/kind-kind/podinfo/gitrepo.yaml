@@ -1,3 +1,8 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: podinfo-helm-oci
 # ---
 # apiVersion: v1
 # kind: Namespace
