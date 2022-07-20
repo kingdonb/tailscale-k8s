@@ -1,5 +1,5 @@
 resources:
 - gitrepo.yaml
 - flux-kustomization.yaml
-- deploy/overlays/automate
-- deploy/overlays/helm-oci
+  # - deploy/overlays/automate
+  # - deploy/overlays/helm-oci
