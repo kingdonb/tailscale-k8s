@@ -1,0 +1,17 @@
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: scrob-dev
+  namespace: scrob-dev
+spec:
+  interval: 7m44s
+  timeout: 2m0s
+  retryInterval: 30s
+  path: ./manifests
+  targetNamespace: scrob-dev
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: scrob-web
+    namespace: scrob-dev
