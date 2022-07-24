@@ -3,7 +3,8 @@ kind: Kustomization
 namespace: default
 resources:
 - flux-kustomization.yaml
-images:
-- name: ghcr.io/kingdonb/scrob-web
-  newName: ghcr.io/kingdonb/scrob-web
-  newTag: c2c8947
+  # :/ This is ineffective:
+# images:
+# - name: ghcr.io/kingdonb/scrob-web
+#   newName: ghcr.io/kingdonb/scrob-web
+#   newTag: c2c8947
