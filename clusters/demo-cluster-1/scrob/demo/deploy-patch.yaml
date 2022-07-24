@@ -1,0 +1,11 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: scrob
+  namespace: default
+spec:
+  template:
+    spec:
+      containers:
+      - image: ghcr.io/kingdonb/scrob-web:c2c8947
+        name: scrob
