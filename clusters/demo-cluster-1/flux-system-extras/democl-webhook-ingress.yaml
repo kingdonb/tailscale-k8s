@@ -8,7 +8,7 @@ metadata:
     #nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
     #nginx.ingress.kubernetes.io/ssl-redirect: "false"
 spec:
-  ingressClassName: traefik
+  ingressClassName: public
   rules:
   - host: democl-webhook.hephy.pro
     http:
