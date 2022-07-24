@@ -4,3 +4,5 @@ resources:
 - ./dev
 - scrob-namespace.yaml
 - scrob-web-receiver.yaml
+# patchesStrategicMerge:
+# - scrob-dev-ingress.yaml
