@@ -7,5 +7,5 @@ metadata:
 spec:
   interval: 30m0s
   ref:
-    branch: main
+    branch: staging
   url: https://github.com/kingdonb/scrob-web
