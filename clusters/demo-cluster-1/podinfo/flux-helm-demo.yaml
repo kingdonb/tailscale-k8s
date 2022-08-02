@@ -6,7 +6,7 @@ metadata:
   namespace: podinfo
 spec:
   interval: 1m0s
-  path: ./deploy/helm-oci
+  path: ./deploy/overlays/helm-oci
   targetNamespace: podinfo-helm-oci
   prune: true
   sourceRef:

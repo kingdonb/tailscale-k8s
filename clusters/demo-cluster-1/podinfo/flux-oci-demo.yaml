@@ -6,7 +6,7 @@ metadata:
   namespace: podinfo
 spec:
   interval: 1m0s
-  path: ./deploy/flux-oci
+  path: ./deploy/overlays/flux-oci
   targetNamespace: podinfo-flux-oci
   prune: true
   sourceRef:
