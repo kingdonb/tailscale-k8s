@@ -1,7 +1,7 @@
 resources:
 - gitrepo.yaml
 - flux-kustomization.yaml
-- deploy/overlays/automate
+#- deploy/overlays/automate
 # flux-oci demo stuff:
 - flux-helm-demo.yaml
 - flux-oci-demo.yaml
