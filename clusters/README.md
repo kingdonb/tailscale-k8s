@@ -1,4 +1,4 @@
 TODO:
 
-* add RenovateBot
-* setup Tailscale
+- [X] ~add RenovateBot~
+- [X] ~setup Tailscale~
