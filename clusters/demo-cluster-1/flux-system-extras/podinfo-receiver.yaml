@@ -8,8 +8,8 @@ spec:
   - package
   - ping
   resources:
-  - kind: OciRepository
-    name: podinfo
+  - kind: Kustomization
+    name: podinfo-oci
     namespace: podinfo-flux-oci
   secretRef:
     name: webhook-token
