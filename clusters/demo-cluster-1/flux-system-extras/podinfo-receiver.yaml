@@ -6,9 +6,11 @@ metadata:
 spec:
   events:
   - package
+  - push
   - ping
   resources:
   - kind: Kustomization
+    apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
     name: podinfo-oci
     namespace: podinfo-flux-oci
   secretRef:
