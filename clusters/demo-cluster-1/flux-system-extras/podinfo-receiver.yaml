@@ -9,8 +9,7 @@ spec:
   - push
   - ping
   resources:
-  - kind: Kustomization
-    apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+  - kind: OCIRepository
     name: podinfo-oci
     namespace: podinfo-flux-oci
   secretRef:
