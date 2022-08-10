@@ -1,8 +1,8 @@
 resources:
-# - gitrepo.yaml
-# - flux-kustomization.yaml
+- gitrepo.yaml
+- flux-kustomization.yaml
 #- deploy/overlays/automate
-# - podinfo-ns.yaml
+- podinfo-ns.yaml
 # flux-oci demo stuff:
 # - flux-helm-demo.yaml
 # - flux-oci-demo.yaml
