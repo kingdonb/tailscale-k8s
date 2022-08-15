@@ -10,6 +10,7 @@ spec:
   - ping
   resources:
   - kind: OCIRepository
+    apiVersion: source.toolkit.fluxcd.io/v1beta2
     name: podinfo-oci
     namespace: podinfo-flux-oci
   secretRef:
