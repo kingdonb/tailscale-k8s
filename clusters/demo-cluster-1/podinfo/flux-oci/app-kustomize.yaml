@@ -5,6 +5,8 @@ metadata:
   namespace: podinfo
 spec:
   interval: 10m
+  timeout: 1m30s
+  retryInterval: 30s
   targetNamespace: podinfo-flux-oci
   sourceRef:
     kind: OCIRepository
