@@ -6,10 +6,10 @@ metadata:
   namespace: podinfo
 spec:
   interval: 1m0s
-  path: ./deploy/overlays/helm-oci
+  path: ./clusters/demo-cluster-1/podinfo/helm-oci
   targetNamespace: podinfo-helm-oci
   prune: true
   sourceRef:
     kind: GitRepository
-    name: podinfo
+    name: flux-system
     namespace: flux-system
