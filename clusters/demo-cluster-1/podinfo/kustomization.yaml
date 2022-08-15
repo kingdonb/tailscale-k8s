@@ -1,3 +1,4 @@
 resources:
 - flux-oci-demo.yaml
 - flux-helm-demo.yaml
+- podinfo-ns.yaml
