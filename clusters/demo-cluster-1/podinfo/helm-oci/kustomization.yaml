@@ -1,0 +1,5 @@
+resources:
+#  - ../automate
+  - helmrelease.yaml
+  - helmrepository.yaml
+  - helm-oci-ns.yaml

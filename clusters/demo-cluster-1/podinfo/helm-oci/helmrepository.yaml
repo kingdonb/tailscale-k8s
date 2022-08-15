@@ -1,0 +1,10 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: podinfo
+  namespace: podinfo
+spec:
+  interval: 30s
+  timeout: 60s
+  type: oci
+  url: oci://ghcr.io/kingdonb/podinfo/helm

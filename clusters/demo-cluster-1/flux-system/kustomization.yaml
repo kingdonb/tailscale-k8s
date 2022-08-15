@@ -3,5 +3,8 @@ kind: Kustomization
 resources:
 - gotk-components.yaml
 - gotk-sync.yaml
-patchesStrategicMerge:
-- flux-system-include-gitrepo.yaml
+# patchesStrategicMerge:
+# - flux-system-include-gitrepo.yaml
+images:
+  - name: ghcr.io/fluxcd/notification-controller
+    newTag: v0.25.1

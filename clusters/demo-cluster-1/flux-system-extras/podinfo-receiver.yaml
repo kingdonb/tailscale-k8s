@@ -1,0 +1,18 @@
+apiVersion: notification.toolkit.fluxcd.io/v1beta1
+kind: Receiver
+metadata:
+  name: podinfo-package
+  namespace: podinfo-flux-oci
+spec:
+  events:
+  - package
+  - push
+  - ping
+  resources:
+  - kind: OCIRepository
+    apiVersion: source.toolkit.fluxcd.io/v1beta2
+    name: podinfo
+    namespace: podinfo-flux-oci
+  secretRef:
+    name: webhook-token
+  type: github

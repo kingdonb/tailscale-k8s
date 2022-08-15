@@ -1,0 +1,13 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: OCIRepository
+metadata:
+  name: podinfo
+  namespace: podinfo-flux-oci
+spec:
+  interval: 1m0s
+  ref:
+    #semver: '^6.2.x'
+    #semver: '*'
+    tag: latest
+  url: oci://ghcr.io/kingdonb/manifests/podinfo
