@@ -9,5 +9,5 @@ spec:
   ref:
     #semver: '^6.2.x'
     #semver: '*'
-    tag: latest
+    tag: production
   url: oci://ghcr.io/kingdonb/manifests/podinfo
