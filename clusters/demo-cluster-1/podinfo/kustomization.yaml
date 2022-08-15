@@ -1,6 +1,13 @@
 resources:
-#- flux-oci-demo.yaml
-- flux-oci/
-#- flux-helm-demo.yaml
-- helm-oci/
+#- flux-oci/
+#- helm-oci/
 - podinfo-ns.yaml
+
+# More complicated version:
+#- flux-oci-demo.yaml
+#- flux-helm-demo.yaml
+#
+# Why use a more complicated version?
+# - For Flux to enforce RBAC, different namespaces and service accounts must be used
+# - You can set `targetNamespace` in a Flux Kustomization, fencing off tenant config
+# - Compartmentalizing: when it fails, don't cause the whole synchronization to stop
