@@ -10,7 +10,7 @@ spec:
   targetNamespace: podinfo-staging
   sourceRef:
     kind: OCIRepository
-    name: podinfo
+    name: podinfo-staging
     namespace: podinfo-flux-oci
   path: ./deploy/overlays/staging
   wait: true
