@@ -2,7 +2,7 @@ resources:
 - flux-oci/
 #- helm-oci/
 - podinfo-ns.yaml
-- podinfo-flux-oci-ns.yaml
+# - podinfo-flux-oci-ns.yaml
 # This didn't work...
   # # we'll supply the namespace ourselves (above)
   # patchesStrategicMerge:
