@@ -11,7 +11,7 @@ spec:
   resources:
   - kind: OCIRepository
     apiVersion: source.toolkit.fluxcd.io/v1beta2
-    name: podinfo-oci
+    name: podinfo
     namespace: podinfo-flux-oci
   secretRef:
     name: webhook-token
