@@ -9,6 +9,7 @@ spec:
   sourceRef:
     kind: OCIRepository
     name: podinfo
+    namespace: podinfo-flux-oci
   path: ./deploy/overlays/production
   wait: true
   prune: true
