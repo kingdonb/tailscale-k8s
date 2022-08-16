@@ -1,0 +1,14 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: podinfo-flux-oci
+---
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: podinfo-staging
+---
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: podinfo-preprod
