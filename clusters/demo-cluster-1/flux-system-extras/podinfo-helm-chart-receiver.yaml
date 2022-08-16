@@ -1,0 +1,18 @@
+apiVersion: notification.toolkit.fluxcd.io/v1beta1
+kind: Receiver
+metadata:
+  name: podinfo-helm-chart
+  namespace: podinfo-helm-oci
+spec:
+  events:
+  - package
+  - push
+  - ping
+  resources:
+  - kind: HelmRelease
+    apiVersion: helm.toolkit.fluxcd.io/v2beta1
+    name: podinfo
+    namespace: podinfo
+  secretRef:
+    name: webhook-token
+  type: github
