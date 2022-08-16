@@ -7,8 +7,8 @@ kind: Namespace
 apiVersion: v1
 metadata:
   name: podinfo-staging
----
-kind: Namespace
-apiVersion: v1
-metadata:
-  name: podinfo-preprod
+#---
+#kind: Namespace
+#apiVersion: v1
+#metadata:
+#  name: podinfo-preprod
