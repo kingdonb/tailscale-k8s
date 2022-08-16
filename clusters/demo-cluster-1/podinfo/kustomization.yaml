@@ -3,7 +3,9 @@ resources:
 # - helm-oci/
 - podinfo-ns.yaml
 
+# Uncomment me if shutting down flux-oci experiment above
 - podinfo-flux-oci-ns.yaml
+
 # More complicated version:
 #- flux-oci-demo.yaml
 #- flux-helm-demo.yaml
