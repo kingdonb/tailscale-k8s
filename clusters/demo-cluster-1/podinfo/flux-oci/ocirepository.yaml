@@ -31,7 +31,7 @@ metadata:
 spec:
   interval: 1m0s
   ref:
-    semver: '^6.2.x'
-    #semver: '*'
+    #semver: '^6.2.x'
+    semver: '*'
     #tag: production
   url: oci://ghcr.io/kingdonb/manifests/podinfo
