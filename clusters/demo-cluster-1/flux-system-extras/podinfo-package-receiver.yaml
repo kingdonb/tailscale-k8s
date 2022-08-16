@@ -13,6 +13,14 @@ spec:
     apiVersion: source.toolkit.fluxcd.io/v1beta2
     name: podinfo
     namespace: podinfo-flux-oci
+  - kind: OCIRepository
+    apiVersion: source.toolkit.fluxcd.io/v1beta2
+    name: podinfo-staging
+    namespace: podinfo-flux-oci
+  - kind: OCIRepository
+    apiVersion: source.toolkit.fluxcd.io/v1beta2
+    name: podinfo-preprod
+    namespace: podinfo-flux-oci
   - kind: HelmRelease
     apiVersion: helm.toolkit.fluxcd.io/v2beta1
     name: podinfo
