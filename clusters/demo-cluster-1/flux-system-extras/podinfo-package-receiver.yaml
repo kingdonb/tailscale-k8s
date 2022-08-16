@@ -1,14 +1,18 @@
 apiVersion: notification.toolkit.fluxcd.io/v1beta1
 kind: Receiver
 metadata:
-  name: podinfo-helm-chart
-  namespace: podinfo-helm-oci
+  name: podinfo-package
+  namespace: podinfo-flux-oci
 spec:
   events:
   - package
   - push
   - ping
   resources:
+  - kind: OCIRepository
+    apiVersion: source.toolkit.fluxcd.io/v1beta2
+    name: podinfo
+    namespace: podinfo-flux-oci
   - kind: HelmRelease
     apiVersion: helm.toolkit.fluxcd.io/v2beta1
     name: podinfo

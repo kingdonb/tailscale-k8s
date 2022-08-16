@@ -1,4 +1,3 @@
 resources:
 - democl-webhook-ingress.yaml
-- podinfo-manifests-receiver.yaml
-- podinfo-helm-chart-receiver.yaml
+- podinfo-package-receiver.yaml
