@@ -1,7 +1,7 @@
 resources:
 - flux-oci/
 # - helm-oci/
-- podinfo-ns.yaml
+# - podinfo-ns.yaml
 
 - podinfo-flux-oci-ns.yaml
 # More complicated version:
