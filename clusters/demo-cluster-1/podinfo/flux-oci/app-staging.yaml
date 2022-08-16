@@ -1,0 +1,17 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: podinfo-oci-staging
+  namespace: podinfo
+spec:
+  interval: 10m
+  timeout: 1m30s
+  retryInterval: 30s
+  targetNamespace: podinfo-staging
+  sourceRef:
+    kind: OCIRepository
+    name: podinfo-staging
+    namespace: podinfo-flux-oci
+  path: ./deploy/overlays/staging
+  wait: true
+  prune: true
