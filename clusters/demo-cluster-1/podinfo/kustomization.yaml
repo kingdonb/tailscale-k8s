@@ -1,10 +1,10 @@
 resources:
-- flux-oci/
+# - flux-oci/
 # - helm-oci/
 - podinfo-ns.yaml
 
 # Uncomment me if shutting down flux-oci experiment above
-# - podinfo-flux-oci-ns.yaml
+- podinfo-flux-oci-ns.yaml
 
 # More complicated version:
 #- flux-oci-demo.yaml
