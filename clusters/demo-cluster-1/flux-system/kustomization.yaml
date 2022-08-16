@@ -5,6 +5,6 @@ resources:
 - gotk-sync.yaml
 # patchesStrategicMerge:
 # - flux-system-include-gitrepo.yaml
-images:
-  - name: ghcr.io/fluxcd/notification-controller
-    newTag: v0.25.1
+# images:
+#   - name: ghcr.io/fluxcd/notification-controller
+#     newTag: v0.25.1
