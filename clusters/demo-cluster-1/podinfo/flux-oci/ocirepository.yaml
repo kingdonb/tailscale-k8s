@@ -11,17 +11,17 @@ spec:
     #semver: '*'
     tag: production
   url: oci://ghcr.io/kingdonb/manifests/podinfo
----
-apiVersion: source.toolkit.fluxcd.io/v1beta2
-kind: OCIRepository
-metadata:
-  name: podinfo-staging
-  namespace: podinfo-flux-oci
-spec:
-  interval: 1m0s
-  ref:
-    tag: staging
-  url: oci://ghcr.io/kingdonb/manifests/podinfo
+# ---
+# apiVersion: source.toolkit.fluxcd.io/v1beta2
+# kind: OCIRepository
+# metadata:
+#   name: podinfo-staging
+#   namespace: podinfo-flux-oci
+# spec:
+#   interval: 1m0s
+#   ref:
+#     tag: staging
+#   url: oci://ghcr.io/kingdonb/manifests/podinfo
 ---
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: OCIRepository
