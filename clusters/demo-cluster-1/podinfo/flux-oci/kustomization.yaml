@@ -2,6 +2,6 @@ resources:
 #  - ../automate
   - app-kustomize.yaml
   - app-staging.yaml
-#  - app-preprod.yaml
+  - app-preprod.yaml
   - ocirepository.yaml
   - flux-oci-ns.yaml
