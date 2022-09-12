@@ -26,7 +26,6 @@ spec:
       image:
         repository: "hashicorp/vault-k8s"
         tag: "latest"
-    
       resources:
           requests:
             memory: 256Mi
@@ -82,11 +81,11 @@ spec:
         enabled: true
     
       standalone:
-        enabled: false
+        enabled: true
     
       # Run Vault in "HA" mode.
       ha:
-        enabled: true
+        enabled: false
         replicas: 5
         raft:
           enabled: true
