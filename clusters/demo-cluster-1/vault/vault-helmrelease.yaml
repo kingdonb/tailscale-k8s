@@ -82,6 +82,30 @@ spec:
     
       standalone:
         enabled: true
+        config: |
+          ui = true
+    
+          listener "tcp" {
+            tls_disable = 1
+            address = "[::]:8200"
+            cluster_address = "[::]:8201"
+          }
+          storage "file" {
+            path = "/vault/data"
+          }
+    
+      service:
+        enabled: true
+    
+      dataStorage:
+        enabled: true
+        size: 10Gi
+        storageClass: null
+        accessMode: ReadWriteOnce
+    
+    ui:
+      enabled: true
+      serviceType: LoadBalancer
     
       # Run Vault in "HA" mode.
       ha:
@@ -146,15 +170,3 @@ spec:
             }
     
             service_registration "kubernetes" {}
-    
-    # Vault UI
-    ui:
-      enabled: true
-      serviceType: "LoadBalancer"
-      serviceNodePort: null
-      externalPort: 8200
-    
-      # For Added Security, edit the below
-      #loadBalancerSourceRanges:
-      #   - < Your IP RANGE Ex. 10.0.0.0/16 >
-      #   - < YOUR SINGLE IP Ex. 1.78.23.3/32 >
