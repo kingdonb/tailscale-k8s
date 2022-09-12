@@ -17,5 +17,7 @@ spec:
   releaseName: vault
   values:
     server:
-      dev:
+      standalone:
         enabled: true
+    ui:
+      loadBalancerIP: 10.17.12.206
