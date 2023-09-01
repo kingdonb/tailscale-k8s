@@ -3,5 +3,5 @@ export KUBE_SECRET=tailscale-auth
 export SA_NAME=tailscale
 export SERVICE_CIDR=10.96.0.0/12
 echo $ROUTES
-export IMAGE_TAG=kingdonb/tailscale-k8s:0.0.13
+export IMAGE_TAG=kingdonb/tailscale-k8s:0.0.14
 
