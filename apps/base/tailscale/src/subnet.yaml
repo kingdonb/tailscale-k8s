@@ -1,6 +1,6 @@
 # Copyright (c) Tailscale Inc & AUTHORS
 # SPDX-License-Identifier: BSD-3-Clause
-apiVersion: v1/apps
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: subnet-router
