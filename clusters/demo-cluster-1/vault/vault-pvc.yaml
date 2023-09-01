@@ -16,6 +16,9 @@ spec:
     requests:
       storage: 10Gi
   storageClassName: local-path
+  hostPath:
+    path: /opt/local-path-provisioner/pvc-61decf71-3bed-406f-8836-18dcbb3ef89e_minio-stage_minio-stage
+    type: DirectoryOrCreate
   nodeAffinity:
   required:
     nodeSelectorTerms:
