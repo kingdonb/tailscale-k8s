@@ -10,12 +10,12 @@ LB_CIDR="${LB_CIDR:-}"
 HOME_CIDR="${HOME_CIDR:-}"
 # LB_CIDR=172.18.0.0/16
 # HOME_CIDR=10.17.12.0/24
-export ROUTES=$SERVICE_CIDR,$POD_CIDR,$LB_CIDR,$HOME_CIDR
+export TS_ROUTES=$SERVICE_CIDR,$POD_CIDR,$LB_CIDR,$HOME_CIDR
 
 export PATH=$PATH:/tailscale/bin
 
 AUTH_KEY="${AUTH_KEY:-}"
-ROUTES="${ROUTES:-}"
+TS_ROUTES="${TS_ROUTES:-}"
 DEST_IP="${DEST_IP:-}"
 EXTRA_ARGS="${EXTRA_ARGS:-}"
 USERSPACE="${USERSPACE:-true}"
@@ -46,8 +46,8 @@ tailscaled ${TAILSCALED_ARGS} &
 PID=$!
 
 UP_ARGS="--accept-dns=false --advertise-exit-node"
-if [[ ! -z "${ROUTES}" ]]; then
-  UP_ARGS="--advertise-routes=${ROUTES} ${UP_ARGS}"
+if [[ ! -z "${TS_ROUTES}" ]]; then
+  UP_ARGS="--advertise-routes=${TS_ROUTES} ${UP_ARGS}"
 fi
 if [[ ! -z "${AUTH_KEY}" ]]; then
   UP_ARGS="--authkey=${AUTH_KEY} ${UP_ARGS}"

@@ -1,6 +1,5 @@
-# Copyright (c) 2021 Tailscale Inc & AUTHORS All rights reserved.
-# Use of this source code is governed by a BSD-style
-# license that can be found in the LICENSE file.
+# Copyright (c) Tailscale Inc & AUTHORS
+# SPDX-License-Identifier: BSD-3-Clause
 apiVersion: v1
 kind: Pod
 metadata:
@@ -12,18 +11,18 @@ spec:
     image: nginx
   - name: ts-sidecar
     imagePullPolicy: Always
-    image: "{{IMAGE_TAG}}"
+    image: "ghcr.io/tailscale/tailscale:latest"
     env:
       # Store the state in a k8s secret
-    - name: KUBE_SECRET
-      value: "{{KUBE_SECRET}}"
-    - name: USERSPACE
+    - name: TS_KUBE_SECRET
+      value: "{{TS_KUBE_SECRET}}"
+    - name: TS_USERSPACE
       value: "false"
-    - name: AUTH_KEY
+    - name: TS_AUTHKEY
       valueFrom:
         secretKeyRef:
           name: tailscale-auth
-          key: AUTH_KEY
+          key: TS_AUTHKEY
           optional: true
     securityContext:
       capabilities:

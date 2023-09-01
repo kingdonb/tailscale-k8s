@@ -1,4 +1,4 @@
-export IMAGE_TAG=kingdonb/tailscale-k8s:0.0.14
+export IMAGE_TAG=kingdonb/tailscale-k8s:0.0.15
 # make push
 export SA_NAME=tailscale
 export KUBE_SECRET=tailscale-auth

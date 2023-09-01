@@ -1,41 +1,31 @@
-# Copyright (c) 2021 Tailscale Inc & AUTHORS All rights reserved.
-# Use of this source code is governed by a BSD-style
-# license that can be found in the LICENSE file.
-apiVersion: apps/v1
-kind: Deployment
+# Copyright (c) Tailscale Inc & AUTHORS
+# SPDX-License-Identifier: BSD-3-Clause
+apiVersion: v1
+kind: Pod
 metadata:
   name: subnet-router
   labels:
     app: tailscale
 spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: tailscale
-  template:
-    metadata:
-      labels:
-        app: tailscale
-    spec:
-      containers:
-      - name: tailscale
-        imagePullPolicy: Always
-        image: "{{IMAGE_TAG}}"
-        env:
-        # Store the state in a k8s secret
-        - name: KUBE_SECRET
-          value: "{{KUBE_SECRET}}"
-        - name: USERSPACE
-          value: "true"
-        - name: AUTH_KEY
-          valueFrom:
-            secretKeyRef:
-              name: tailscale-auth
-              key: AUTH_KEY
-              optional: true
-        - name: ROUTES
-          value: "{{ROUTES}}"
-        securityContext:
-          runAsUser: 1000
-          runAsGroup: 1000
-      serviceAccountName: "{{SA_NAME}}"
+  serviceAccountName: "{{SA_NAME}}"
+  containers:
+  - name: tailscale
+    imagePullPolicy: Always
+    image: "ghcr.io/tailscale/tailscale:latest"
+    env:
+    # Store the state in a k8s secret
+    - name: TS_KUBE_SECRET
+      value: "{{TS_KUBE_SECRET}}"
+    - name: TS_USERSPACE
+      value: "true"
+    - name: TS_AUTHKEY
+      valueFrom:
+        secretKeyRef:
+          name: tailscale-auth
+          key: TS_AUTHKEY
+          optional: true
+    - name: TS_ROUTES
+      value: "{{TS_ROUTES}}"
+    securityContext:
+      runAsUser: 1000
+      runAsGroup: 1000
