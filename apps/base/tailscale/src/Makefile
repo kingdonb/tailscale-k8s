@@ -13,7 +13,7 @@ KUBE_SECRET ?= tailscale
 all: rbac subnet-router
 
 build:
-	@docker build . -t $(IMAGE_TAG)
+	@docker buildx build --push --platform=linux/amd64,linux/arm64,linux/arm/v7,linux/386 . -t $(IMAGE_TAG)
 
 push: build
 	@docker push $(IMAGE_TAG)
